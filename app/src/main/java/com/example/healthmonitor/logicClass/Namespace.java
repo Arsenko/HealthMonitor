@@ -1,4 +1,4 @@
-package com.example.healthmonitor;
+package com.example.healthmonitor.logicClass;
 
 public class Namespace {
     String surname;

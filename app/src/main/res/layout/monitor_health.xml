@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="numberSigned" />
 
     <TextView
         android:id="@+id/textView4"
@@ -26,12 +26,12 @@
         android:text="@string/steps" />
 
     <EditText
-        android:id="@+id/stepsInput"
+        android:id="@+id/steps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/saveButton"

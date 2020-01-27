@@ -12,7 +12,7 @@
         android:text="@string/surname" />
 
     <EditText
-        android:id="@+id/upperPressureInput"
+        android:id="@+id/surname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -27,7 +27,7 @@
         android:text="@string/name" />
 
     <EditText
-        android:id="@+id/lowerPressureInput"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -42,7 +42,7 @@
         android:text="@string/firstname" />
 
     <EditText
-        android:id="@+id/pulseInput"
+        android:id="@+id/lastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -57,7 +57,7 @@
         android:text="@string/age" />
 
     <EditText
-        android:id="@+id/stepsInput"
+        android:id="@+id/age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
