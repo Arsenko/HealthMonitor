@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="datetime" />
 
     <Button
         android:id="@+id/saveButton"

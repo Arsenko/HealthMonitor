@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.healthmonitor.logicClass.Namespace;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ClientCard extends AppCompatActivity {
 
@@ -58,6 +59,7 @@ public class ClientCard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i("OnClick button save","OnClick button save");
+                System.out.println(surname.getText().toString());
                 if(checkForm(surname,name,lastname,age)){
                     names.add(new Namespace(surname.getText().toString(),name.getText().toString(),
                             lastname.getText().toString(),
@@ -67,8 +69,13 @@ public class ClientCard extends AppCompatActivity {
         });
     }
     public boolean checkForm(TextView surname,TextView name,TextView lastname,TextView age){
-        if(surname.getText().equals("") || name.getText().equals("") ||
-                lastname.getText().equals("") || age.getText().equals("")){
+        if(surname.getText().length()!=0 || name.getText().length()!=0||
+                lastname.getText().length()!=0 || age.getText().length()!=0) {
+            return false;
+        }
+        try{
+            Integer.valueOf(age.getText().toString());
+        }catch(NumberFormatException e){
             return false;
         }
         return true;

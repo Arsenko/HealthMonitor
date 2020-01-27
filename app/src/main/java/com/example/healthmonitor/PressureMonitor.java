@@ -72,8 +72,20 @@ public class PressureMonitor extends AppCompatActivity {
         });
     }
     public boolean checkForm(TextView upperPressure, TextView lowerPressure, TextView pulse, TextView data) {
-        if (upperPressure.getText().equals("") || lowerPressure.getText().equals("") ||
-                pulse.getText().equals("") || data.getText().equals("")) {
+        if (upperPressure.getText().length()!=0 || lowerPressure.getText().length()!=0 ||
+                pulse.getText().length()!=0 || data.getText().length()!=0) {
+            return false;
+        }
+        try{
+            new Date(data.getText().toString());
+        }catch(IllegalArgumentException e){
+            return false;
+        }
+        try{
+            Integer.valueOf(pulse.getText().toString());
+            Integer.valueOf(lowerPressure.getText().toString());
+            Integer.valueOf(upperPressure.getText().toString());
+        }catch (NumberFormatException e){
             return false;
         }
         return true;

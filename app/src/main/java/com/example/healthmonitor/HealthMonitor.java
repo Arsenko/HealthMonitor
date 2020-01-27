@@ -66,7 +66,13 @@ public class HealthMonitor extends AppCompatActivity {
         });
     }
     public boolean checkForm(TextView weigth,TextView steps){
-        if(weigth.getText().equals("") || steps.getText().equals("")){
+        if(weigth.getText().toString().length()!=0 || steps.getText().length()!=0){
+            return false;
+        }
+        try{
+            Integer.valueOf(steps.getText().toString());
+            Double.valueOf(weigth.getText().toString());
+        }catch(NumberFormatException e) {
             return false;
         }
         return true;
